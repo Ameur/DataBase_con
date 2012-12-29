@@ -274,11 +274,18 @@
    <widget class="QLabel" name="label_6">
     <property name="geometry">
      <rect>
-      <x>60</x>
+      <x>20</x>
       <y>60</y>
-      <width>46</width>
-      <height>13</height>
+      <width>71</width>
+      <height>20</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
     </property>
     <property name="text">
      <string>RECU</string>
@@ -412,19 +419,19 @@
      <string>Menu</string>
     </property>
    </widget>
-  </widget>
-  <widget class="Line" name="lineo">
-   <property name="geometry">
-    <rect>
-     <x>415</x>
-     <y>0</y>
-     <width>231</width>
-     <height>501</height>
-    </rect>
-   </property>
-   <property name="orientation">
-    <enum>Qt::Vertical</enum>
-   </property>
+   <widget class="Line" name="line_5">
+    <property name="geometry">
+     <rect>
+      <x>-10</x>
+      <y>10</y>
+      <width>20</width>
+      <height>551</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
   </widget>
   <widget class="QTableWidget" name="tableVente">
    <property name="geometry">

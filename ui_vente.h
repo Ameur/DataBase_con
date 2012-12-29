@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'vente.ui'
 **
-** Created: Sat 29. Dec 01:09:48 2012
+** Created: Sat 29. Dec 01:39:10 2012
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -62,7 +62,7 @@ public:
     QPushButton *zero;
     QPushButton *pushButton_13;
     QCommandLinkButton *commandLinkButton;
-    QFrame *lineo;
+    QFrame *line_5;
     QTableWidget *tableVente;
     QLabel *label_7;
     QFrame *line_3;
@@ -118,6 +118,12 @@ public:
         spinBox_2->setGeometry(QRect(182, 60, 41, 21));
         spinBox_2->setFont(font);
         spinBox_2->setMinimum(1);
+        lineEdit->raise();
+        label->raise();
+        label_3->raise();
+        label_4->raise();
+        lineEdit_3->raise();
+        spinBox_2->raise();
         line_2->raise();
         widget_2 = new QWidget(vente);
         widget_2->setObjectName(QString::fromUtf8("widget_2"));
@@ -168,7 +174,8 @@ public:
         lcdNumber->setNumDigits(10);
         label_6 = new QLabel(widget_2);
         label_6->setObjectName(QString::fromUtf8("label_6"));
-        label_6->setGeometry(QRect(60, 60, 46, 13));
+        label_6->setGeometry(QRect(20, 60, 71, 20));
+        label_6->setFont(font1);
         pushButton_10 = new QPushButton(widget_2);
         pushButton_10->setObjectName(QString::fromUtf8("pushButton_10"));
         pushButton_10->setGeometry(QRect(60, 480, 311, 41));
@@ -242,11 +249,11 @@ public:
         commandLinkButton = new QCommandLinkButton(widget_2);
         commandLinkButton->setObjectName(QString::fromUtf8("commandLinkButton"));
         commandLinkButton->setGeometry(QRect(340, 10, 81, 41));
-        lineo = new QFrame(vente);
-        lineo->setObjectName(QString::fromUtf8("lineo"));
-        lineo->setGeometry(QRect(415, 0, 231, 501));
-        lineo->setFrameShape(QFrame::VLine);
-        lineo->setFrameShadow(QFrame::Sunken);
+        line_5 = new QFrame(widget_2);
+        line_5->setObjectName(QString::fromUtf8("line_5"));
+        line_5->setGeometry(QRect(-10, 10, 20, 551));
+        line_5->setFrameShape(QFrame::VLine);
+        line_5->setFrameShadow(QFrame::Sunken);
         tableVente = new QTableWidget(vente);
         if (tableVente->columnCount() < 5)
             tableVente->setColumnCount(5);
@@ -343,7 +350,7 @@ public:
         nine->setText(QApplication::translate("vente", "9", 0, QApplication::UnicodeUTF8));
         pushButton_11->setText(QApplication::translate("vente", ",", 0, QApplication::UnicodeUTF8));
         zero->setText(QApplication::translate("vente", "0", 0, QApplication::UnicodeUTF8));
-        pushButton_13->setText(QApplication::translate("vente", "Effacer", 0, QApplication::UnicodeUTF8));
+        pushButton_13->setText(QApplication::translate("vente", "C", 0, QApplication::UnicodeUTF8));
         commandLinkButton->setText(QApplication::translate("vente", "Menu", 0, QApplication::UnicodeUTF8));
         QTableWidgetItem *___qtablewidgetitem4 = tableVente->horizontalHeaderItem(0);
         ___qtablewidgetitem4->setText(QApplication::translate("vente", "Libelle", 0, QApplication::UnicodeUTF8));
