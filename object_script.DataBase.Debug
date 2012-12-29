@@ -1,0 +1,16 @@
+INPUT(
+./debug\main.o
+./debug\dialog.o
+./debug\menu.o
+./debug\midicament.o
+./debug\fournisseur.o
+./debug\vente.o
+./debug\deconnection.o
+./debug\moc_dialog.o
+./debug\moc_menu.o
+./debug\moc_midicament.o
+./debug\moc_fournisseur.o
+./debug\moc_vente.o
+./debug\moc_deconnection.o
+./debug\qrc_ressources.o
+);

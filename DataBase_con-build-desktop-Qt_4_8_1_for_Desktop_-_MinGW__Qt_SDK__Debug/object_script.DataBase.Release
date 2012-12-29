@@ -1,0 +1,15 @@
+INPUT(
+./release\main.o
+./release\dialog.o
+./release\menu.o
+./release\midicament.o
+./release\fournisseur.o
+./release\vente.o
+./release\deconnection.o
+./release\moc_dialog.o
+./release\moc_menu.o
+./release\moc_midicament.o
+./release\moc_fournisseur.o
+./release\moc_vente.o
+./release\moc_deconnection.o
+);

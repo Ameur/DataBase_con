@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>midicament</class>
+ <widget class="QDialog" name="midicament">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>648</width>
+    <height>446</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QTabWidget" name="Med">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>651</width>
+     <height>451</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>3</number>
+   </property>
+   <widget class="QWidget" name="Ajouter">
+    <attribute name="title">
+     <string>Ajouter </string>
+    </attribute>
+    <widget class="QCommandLinkButton" name="commandLinkButton">
+     <property name="geometry">
+      <rect>
+       <x>550</x>
+       <y>380</y>
+       <width>91</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Menu</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="BotAjouterAjouMed">
+     <property name="geometry">
+      <rect>
+       <x>341</x>
+       <y>351</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Ajouter</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="BOTAnnulerAjout">
+     <property name="geometry">
+      <rect>
+       <x>422</x>
+       <y>351</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Annuler</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>62</x>
+       <y>22</y>
+       <width>311</width>
+       <height>321</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QLabel" name="codeajout">
+          <property name="text">
+           <string>Code Medicament</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="libelleajout">
+          <property name="text">
+           <string>Libelle Medicament</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelCodefamille">
+          <property name="text">
+           <string>Designi famille</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="Categorieajout">
+          <property name="text">
+           <string>Categorie</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelArmoire">
+          <property name="text">
+           <string>Armoire</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="prixajout">
+          <property name="text">
+           <string>Prix de vente</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelQuantite">
+          <property name="text">
+           <string>Quantité</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QLineEdit" name="lineEditCodee"/>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEditLibelle"/>
+        </item>
+        <item>
+         <widget class="QComboBox" name="comboCode_fam"/>
+        </item>
+        <item>
+         <widget class="QComboBox" name="CategListe">
+          <item>
+           <property name="text">
+            <string>Selectionner Catégorie</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Bébé &lt; 4ans</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>enfant &gt; 12ans</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Enfant &lt; 16 ans</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Adulte &lt; 35 ans</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Adulte &gt; 35 ans</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="ArmoiLis"/>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdPrixVente"/>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEditQuantite"/>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="ModifierSupprimer">
+    <attribute name="title">
+     <string>Modifier / Supprimer</string>
+    </attribute>
+    <widget class="QWidget" name="layoutWidget_3">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>10</y>
+       <width>351</width>
+       <height>321</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QLabel" name="libelleajout_2">
+          <property name="text">
+           <string>Libelle Medicament</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="codeajout_3">
+          <property name="text">
+           <string>Code Medicament</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelCodefamille_3">
+          <property name="text">
+           <string>Famille</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="Categorieajout_3">
+          <property name="text">
+           <string>Categorie</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelArmoire_3">
+          <property name="text">
+           <string>Armoire</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="prixajout_3">
+          <property name="text">
+           <string>Prix de vente</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelQuantite_3">
+          <property name="text">
+           <string>Quantité</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QComboBox" name="comboBoxLib"/>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEditCodee_med"/>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEditcodefamille_3">
+          <property name="focusPolicy">
+           <enum>Qt::NoFocus</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="lineEditCategorie_3"/>
+        </item>
+        <item>
+         <widget class="QComboBox" name="lineEditArmoire_3"/>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdPrixVente_3"/>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEditQuantite_3"/>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QPushButton" name="pushButtonSupModMed">
+     <property name="geometry">
+      <rect>
+       <x>331</x>
+       <y>341</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Supprimer</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonModifModMed">
+     <property name="geometry">
+      <rect>
+       <x>412</x>
+       <y>341</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Modifier</string>
+     </property>
+    </widget>
+    <widget class="QCommandLinkButton" name="commandLinkButton_3">
+     <property name="geometry">
+      <rect>
+       <x>530</x>
+       <y>380</y>
+       <width>91</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Menu</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="Recherche">
+    <attribute name="title">
+     <string>Recherche</string>
+    </attribute>
+    <widget class="QLabel" name="labelRechecrchMed">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>30</y>
+       <width>161</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Entrer Nom Medicament</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEditRechecrchMed">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>30</y>
+       <width>261</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonRecherchmed">
+     <property name="geometry">
+      <rect>
+       <x>450</x>
+       <y>30</y>
+       <width>101</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Lancer Recherche</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="reches">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>70</y>
+       <width>261</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="acceptDrops">
+      <bool>false</bool>
+     </property>
+     <property name="editable">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QWidget" name="layoutWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>100</y>
+       <width>361</width>
+       <height>291</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <widget class="QLabel" name="codeajout_2">
+          <property name="text">
+           <string>Code Medicament</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelCodefamille_2">
+          <property name="text">
+           <string>Code famille</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="Categorieajout_2">
+          <property name="text">
+           <string>Categorie</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelArmoire_2">
+          <property name="text">
+           <string>Armoire</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="prixajout_2">
+          <property name="text">
+           <string>Prix de vente</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelQuantite_2">
+          <property name="text">
+           <string>Quantité</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_6">
+        <item>
+         <widget class="QLineEdit" name="lineEditCodee_2">
+          <property name="focusPolicy">
+           <enum>Qt::NoFocus</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEditcodefamille_2">
+          <property name="focusPolicy">
+           <enum>Qt::NoFocus</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEditCategorie_2">
+          <property name="focusPolicy">
+           <enum>Qt::NoFocus</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEditArmoire_2">
+          <property name="focusPolicy">
+           <enum>Qt::NoFocus</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdPrixVente_2">
+          <property name="focusPolicy">
+           <enum>Qt::NoFocus</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEditQuantite_2">
+          <property name="focusPolicy">
+           <enum>Qt::NoFocus</enum>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QCommandLinkButton" name="commandLinkButton_2">
+     <property name="geometry">
+      <rect>
+       <x>540</x>
+       <y>380</y>
+       <width>91</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Menu</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab">
+    <attribute name="title">
+     <string>Affichage complet</string>
+    </attribute>
+    <widget class="QTableWidget" name="tabtab">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>60</y>
+       <width>641</width>
+       <height>251</height>
+      </rect>
+     </property>
+     <property name="mouseTracking">
+      <bool>false</bool>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::WheelFocus</enum>
+     </property>
+     <property name="acceptDrops">
+      <bool>false</bool>
+     </property>
+     <property name="editTriggers">
+      <set>QAbstractItemView::NoEditTriggers</set>
+     </property>
+     <property name="tabKeyNavigation">
+      <bool>false</bool>
+     </property>
+     <property name="showDropIndicator" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="dragEnabled">
+      <bool>false</bool>
+     </property>
+     <property name="dragDropOverwriteMode">
+      <bool>false</bool>
+     </property>
+     <property name="dragDropMode">
+      <enum>QAbstractItemView::NoDragDrop</enum>
+     </property>
+     <property name="textElideMode">
+      <enum>Qt::ElideRight</enum>
+     </property>
+     <property name="showGrid">
+      <bool>true</bool>
+     </property>
+     <property name="gridStyle">
+      <enum>Qt::DashDotLine</enum>
+     </property>
+     <property name="wordWrap">
+      <bool>false</bool>
+     </property>
+     <property name="cornerButtonEnabled">
+      <bool>false</bool>
+     </property>
+     <column>
+      <property name="text">
+       <string>Libelle</string>
+      </property>
+      <property name="background">
+       <color>
+        <red>170</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string notr="true">Code Medicament</string>
+      </property>
+      <property name="toolTip">
+       <string notr="true"/>
+      </property>
+      <property name="whatsThis">
+       <string notr="true"/>
+      </property>
+      <property name="font">
+       <font>
+        <kerning>false</kerning>
+       </font>
+      </property>
+      <property name="background">
+       <color>
+        <red>170</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Code Famille</string>
+      </property>
+      <property name="background">
+       <color>
+        <red>170</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Code Armoire</string>
+      </property>
+      <property name="background">
+       <color>
+        <red>170</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Catégorie</string>
+      </property>
+      <property name="background">
+       <color>
+        <red>170</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Quantité</string>
+      </property>
+      <property name="background">
+       <color>
+        <red>170</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Prix de vente</string>
+      </property>
+      <property name="background">
+       <color>
+        <red>170</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </property>
+     </column>
+    </widget>
+    <widget class="QCommandLinkButton" name="commandLinkButton_4">
+     <property name="geometry">
+      <rect>
+       <x>550</x>
+       <y>380</y>
+       <width>91</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Menu</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>lineEdPrixVente</tabstop>
+  <tabstop>Med</tabstop>
+  <tabstop>commandLinkButton</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
