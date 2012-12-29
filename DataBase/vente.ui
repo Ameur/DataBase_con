@@ -141,10 +141,12 @@
      <number>1</number>
     </property>
    </widget>
-   <zorder>layoutWidget</zorder>
-   <zorder>layoutWidget</zorder>
-   <zorder>layoutWidget</zorder>
-   <zorder>layoutWidget</zorder>
+   <zorder>lineEdit</zorder>
+   <zorder>label</zorder>
+   <zorder>label_3</zorder>
+   <zorder>label_4</zorder>
+   <zorder>lineEdit_3</zorder>
+   <zorder>spinBox_2</zorder>
    <zorder>line_2</zorder>
   </widget>
   <widget class="QWidget" name="widget_2" native="true">
@@ -391,7 +393,7 @@
         </font>
        </property>
        <property name="text">
-        <string>Effacer</string>
+        <string>C</string>
        </property>
       </widget>
      </item>
