@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'midicament.ui'
 **
-** Created: Thu 3. Jan 01:54:33 2013
+** Created: Thu 3. Jan 15:24:43 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -55,6 +55,7 @@ public:
     QComboBox *ArmoiLis;
     QLineEdit *lineEdPrixVente;
     QLineEdit *lineEditQuantite;
+    QLabel *label;
     QWidget *ModifierSupprimer;
     QWidget *layoutWidget_3;
     QHBoxLayout *horizontalLayout_4;
@@ -107,10 +108,17 @@ public:
     {
         if (midicament->objectName().isEmpty())
             midicament->setObjectName(QString::fromUtf8("midicament"));
-        midicament->resize(648, 446);
+        midicament->resize(651, 446);
+        midicament->setMinimumSize(QSize(651, 446));
+        midicament->setMaximumSize(QSize(651, 446));
+        QIcon icon;
+        icon.addFile(QString::fromUtf8(":/new/prefix2/ressources/images (1).jpg"), QSize(), QIcon::Normal, QIcon::Off);
+        midicament->setWindowIcon(icon);
         Med = new QTabWidget(midicament);
         Med->setObjectName(QString::fromUtf8("Med"));
         Med->setGeometry(QRect(0, 0, 651, 451));
+        Med->setMinimumSize(QSize(651, 451));
+        Med->setMaximumSize(QSize(651, 451));
         QFont font;
         font.setBold(true);
         font.setWeight(75);
@@ -212,7 +220,17 @@ public:
 
         horizontalLayout_2->addLayout(verticalLayout);
 
+        label = new QLabel(Ajouter);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setGeometry(QRect(-5, -18, 651, 441));
+        label->setMaximumSize(QSize(651, 16777215));
+        label->setPixmap(QPixmap(QString::fromUtf8(":/new/prefix1/ressources/4571158-pilules-ovale-vert-isole-sur-fond-blanc.jpg")));
         Med->addTab(Ajouter, QString());
+        label->raise();
+        commandLinkButton->raise();
+        BotAjouterAjouMed->raise();
+        BOTAnnulerAjout->raise();
+        layoutWidget->raise();
         ModifierSupprimer = new QWidget();
         ModifierSupprimer->setObjectName(QString::fromUtf8("ModifierSupprimer"));
         layoutWidget_3 = new QWidget(ModifierSupprimer);
@@ -500,7 +518,7 @@ public:
 
     void retranslateUi(QDialog *midicament)
     {
-        midicament->setWindowTitle(QApplication::translate("midicament", "Dialog", 0, QApplication::UnicodeUTF8));
+        midicament->setWindowTitle(QApplication::translate("midicament", "Medicament", 0, QApplication::UnicodeUTF8));
         commandLinkButton->setText(QApplication::translate("midicament", "Menu", 0, QApplication::UnicodeUTF8));
         BotAjouterAjouMed->setText(QApplication::translate("midicament", "Ajouter", 0, QApplication::UnicodeUTF8));
         BOTAnnulerAjout->setText(QApplication::translate("midicament", "Annuler", 0, QApplication::UnicodeUTF8));
@@ -521,6 +539,7 @@ public:
          << QApplication::translate("midicament", "Adulte > 35 ans", 0, QApplication::UnicodeUTF8)
          << QString()
         );
+        label->setText(QString());
         Med->setTabText(Med->indexOf(Ajouter), QApplication::translate("midicament", "Ajouter ", 0, QApplication::UnicodeUTF8));
         libelleajout_2->setText(QApplication::translate("midicament", "Libelle Medicament", 0, QApplication::UnicodeUTF8));
         codeajout_3->setText(QApplication::translate("midicament", "Code Medicament", 0, QApplication::UnicodeUTF8));

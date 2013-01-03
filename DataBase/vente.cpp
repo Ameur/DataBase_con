@@ -60,7 +60,6 @@ vente::vente(QWidget *parent) :
 
 }
 
-// Montre
 void vente::showTime()
 //! [1] //! [2]
 {
@@ -179,7 +178,7 @@ void vente::on_pushButton_13_clicked()
 
 
 
-// calculatrice
+// calc
 
 void vente::on_one_clicked()
 {
@@ -252,15 +251,14 @@ void vente::on_pushButton_11_clicked()
 
 }
 
+
 void vente::on_pushButton_10_clicked()
 {
-        QDate QDTime = QDate::currentDate();
-        QString QDTStr = QDTime.toString();
-        QSqlQuery qry;
-    int i=0;
-    int max =ui->tablesomme->rowCount();
-
-
+    QDate QDTime = QDate::currentDate();
+    QString QDTStr = QDTime.toString();
+    QSqlQuery qry;
+   int i=0;
+   int max =ui->tablesomme->rowCount();
 
     while(i<max)
 {        QTableWidgetItem *id = ui->tablesomme->item(i,0);

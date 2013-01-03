@@ -6,12 +6,28 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>648</width>
+    <width>651</width>
     <height>446</height>
    </rect>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>651</width>
+    <height>446</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>651</width>
+    <height>446</height>
+   </size>
+  </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Medicament</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="ressources.qrc">
+    <normaloff>:/new/prefix2/ressources/images (1).jpg</normaloff>:/new/prefix2/ressources/images (1).jpg</iconset>
   </property>
   <widget class="QTabWidget" name="Med">
    <property name="geometry">
@@ -21,6 +37,18 @@
      <width>651</width>
      <height>451</height>
     </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>651</width>
+     <height>451</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>651</width>
+     <height>451</height>
+    </size>
    </property>
    <property name="font">
     <font>
@@ -200,6 +228,33 @@
       </item>
      </layout>
     </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>-5</x>
+       <y>-18</y>
+       <width>651</width>
+       <height>441</height>
+      </rect>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>651</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="ressources.qrc">:/new/prefix1/ressources/4571158-pilules-ovale-vert-isole-sur-fond-blanc.jpg</pixmap>
+     </property>
+    </widget>
+    <zorder>label</zorder>
+    <zorder>commandLinkButton</zorder>
+    <zorder>BotAjouterAjouMed</zorder>
+    <zorder>BOTAnnulerAjout</zorder>
+    <zorder>layoutWidget</zorder>
    </widget>
    <widget class="QWidget" name="ModifierSupprimer">
     <attribute name="title">
@@ -708,6 +763,8 @@
   <tabstop>commandLinkButton_4</tabstop>
   <tabstop>Med</tabstop>
  </tabstops>
- <resources/>
+ <resources>
+  <include location="ressources.qrc"/>
+ </resources>
  <connections/>
 </ui>

@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'vente.ui'
 **
-** Created: Sun 30. Dec 02:35:25 2012
+** Created: Thu 3. Jan 15:24:43 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -73,7 +73,9 @@ public:
     {
         if (vente->objectName().isEmpty())
             vente->setObjectName(QString::fromUtf8("vente"));
-        vente->resize(963, 542);
+        vente->resize(963, 541);
+        vente->setMinimumSize(QSize(963, 541));
+        vente->setMaximumSize(QSize(963, 541));
         widget = new QWidget(vente);
         widget->setObjectName(QString::fromUtf8("widget"));
         widget->setGeometry(QRect(-1, -1, 271, 111));
@@ -326,7 +328,7 @@ public:
 
     void retranslateUi(QDialog *vente)
     {
-        vente->setWindowTitle(QApplication::translate("vente", "Dialog", 0, QApplication::UnicodeUTF8));
+        vente->setWindowTitle(QApplication::translate("vente", "Vente", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("vente", "Code a barre", 0, QApplication::UnicodeUTF8));
         label_3->setText(QApplication::translate("vente", "Nom Medicament", 0, QApplication::UnicodeUTF8));
         label_4->setText(QApplication::translate("vente", "Quantit\303\251 ", 0, QApplication::UnicodeUTF8));

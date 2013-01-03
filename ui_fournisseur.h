@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'fournisseur.ui'
 **
-** Created: Wed 26. Dec 20:30:44 2012
+** Created: Thu 3. Jan 14:31:46 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -62,7 +62,7 @@ public:
 
     void retranslateUi(QDialog *fournisseur)
     {
-        fournisseur->setWindowTitle(QApplication::translate("fournisseur", "Dialog", 0, QApplication::UnicodeUTF8));
+        fournisseur->setWindowTitle(QApplication::translate("fournisseur", "Fournisseur", 0, QApplication::UnicodeUTF8));
         commandLinkButton_2->setText(QApplication::translate("fournisseur", "Menu", 0, QApplication::UnicodeUTF8));
         four->setTabText(four->indexOf(tab), QApplication::translate("fournisseur", "Ajouter", 0, QApplication::UnicodeUTF8));
         commandLinkButton->setText(QApplication::translate("fournisseur", "Menu", 0, QApplication::UnicodeUTF8));

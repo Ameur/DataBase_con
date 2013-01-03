@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'menu.ui'
 **
-** Created: Thu 3. Jan 02:01:17 2013
+** Created: Thu 3. Jan 15:02:49 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -36,6 +36,8 @@ public:
         if (Menu->objectName().isEmpty())
             Menu->setObjectName(QString::fromUtf8("Menu"));
         Menu->resize(484, 212);
+        Menu->setMinimumSize(QSize(484, 212));
+        Menu->setMaximumSize(QSize(484, 212));
         butmedicam = new QPushButton(Menu);
         butmedicam->setObjectName(QString::fromUtf8("butmedicam"));
         butmedicam->setGeometry(QRect(10, 140, 75, 61));
@@ -65,7 +67,7 @@ public:
 
     void retranslateUi(QDialog *Menu)
     {
-        Menu->setWindowTitle(QApplication::translate("Menu", "Dialog", 0, QApplication::UnicodeUTF8));
+        Menu->setWindowTitle(QApplication::translate("Menu", "Menu", 0, QApplication::UnicodeUTF8));
         butmedicam->setText(QApplication::translate("Menu", "Medicaments", 0, QApplication::UnicodeUTF8));
         butfourni->setText(QApplication::translate("Menu", "Fournisseurs", 0, QApplication::UnicodeUTF8));
         butvente->setText(QApplication::translate("Menu", "Ventes", 0, QApplication::UnicodeUTF8));

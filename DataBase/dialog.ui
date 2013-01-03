@@ -10,8 +10,26 @@
     <height>110</height>
    </rect>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>447</width>
+    <height>110</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>447</width>
+    <height>110</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <weight>75</weight>
+    <bold>true</bold>
+   </font>
+  </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>connexion</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0" rowspan="2">

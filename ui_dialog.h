@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'dialog.ui'
 **
-** Created: Wed 26. Dec 20:30:44 2012
+** Created: Thu 3. Jan 14:59:01 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -45,6 +45,12 @@ public:
         if (Dialog->objectName().isEmpty())
             Dialog->setObjectName(QString::fromUtf8("Dialog"));
         Dialog->resize(447, 110);
+        Dialog->setMinimumSize(QSize(447, 110));
+        Dialog->setMaximumSize(QSize(447, 110));
+        QFont font;
+        font.setBold(true);
+        font.setWeight(75);
+        Dialog->setFont(font);
         gridLayout = new QGridLayout(Dialog);
         gridLayout->setSpacing(6);
         gridLayout->setContentsMargins(11, 11, 11, 11);
@@ -113,7 +119,7 @@ public:
 
     void retranslateUi(QDialog *Dialog)
     {
-        Dialog->setWindowTitle(QApplication::translate("Dialog", "Dialog", 0, QApplication::UnicodeUTF8));
+        Dialog->setWindowTitle(QApplication::translate("Dialog", "connexion", 0, QApplication::UnicodeUTF8));
         label_2->setText(QApplication::translate("Dialog", "Matricule ", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("Dialog", "Password", 0, QApplication::UnicodeUTF8));
         btnOk->setText(QApplication::translate("Dialog", "Login", 0, QApplication::UnicodeUTF8));

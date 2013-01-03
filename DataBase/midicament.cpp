@@ -259,6 +259,9 @@ void midicament::on_BotAjouterAjouMed_clicked()
     listeLibellert();
 
 }
+
+
+
 void midicament::on_BOTAnnulerAjout_clicked()
 {
 
@@ -367,12 +370,6 @@ void midicament::on_pushButtonRecherchmed_clicked()
 
 
 
-
-
-
-
-
-
 void midicament::on_pushButton_clicked()
 {
     ui->lineEditCodee_2->clear();
@@ -384,6 +381,9 @@ void midicament::on_pushButton_clicked()
     ui->reches->clear();
     ui->lineEditRechecrchMed->clear();
 }
+
+
+
 void midicament::on_lineEditCodee_3_currentIndexChanged(const QString &arg1)
 {
 
@@ -469,7 +469,7 @@ void midicament::on_pushButtonSupModMed_clicked()
             }
             else
             {
-                QMessageBox::information(this, tr("Supp!"),tr(" Ouppaa .. \n Medicament supprimé avec succé !"));
+                QMessageBox::information(this, tr("Suppression"),tr(" Succé \n Medicament supprimé avec succé !"));
 
             ui->lineEditCodee_med->clear();
             ui->lineEditcodefamille_3->clear();
@@ -496,10 +496,15 @@ void midicament::on_pushButtonModifModMed_clicked()
     }
     else {QMessageBox::critical(0, tr("Echec"),tr("requete invalide"), QMessageBox::Ok);}
 }
+
+
+
 void midicament::on_Med_destroyed()
 {
 
 }
+
+
 void midicament::listedARMOI2()
 {
     int j=0;
@@ -547,6 +552,7 @@ midicament::~midicament()
 {
     delete ui;
 }
+
 
 void midicament::on_commandLinkButton_3_clicked()
 {

@@ -1,8 +1,16 @@
 <RCC>
     <qresource prefix="/new/prefix1">
         <file>ressources/ACCUEIL PHARMACIE(3).jpg</file>
+        <file>ressources/4571158-pilules-ovale-vert-isole-sur-fond-blanc.jpg</file>
     </qresource>
     <qresource prefix="/new/prefix2">
         <file>ressources/images (1).jpg</file>
+    </qresource>
+    <qresource prefix="/new/prefix3">
+        <file>ressources/15414376-medicale-embleme-symbole-de-la-croix-de-pharmacie-ou-de-medecine-vert-signe-medical-le-serpent-et-un.jpg</file>
+    </qresource>
+    <qresource prefix="/new/prefix4">
+        <file>ressources/Bg2.jpg</file>
+        <file>ressources/Wallbg.png</file>
     </qresource>
 </RCC>

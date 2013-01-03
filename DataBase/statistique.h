@@ -15,6 +15,9 @@ public:
     explicit Statistique(QWidget *parent = 0);
     ~Statistique();
     
+private slots:
+    void on_commandLinkButton_clicked();
+
 private:
     Ui::Statistique *ui;
 };

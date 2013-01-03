@@ -16,6 +16,19 @@
   <property name="windowTitle">
    <string>Statistique</string>
   </property>
+  <widget class="QCommandLinkButton" name="commandLinkButton">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>370</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Menu</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

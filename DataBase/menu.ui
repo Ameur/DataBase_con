@@ -10,8 +10,20 @@
     <height>212</height>
    </rect>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>484</width>
+    <height>212</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>484</width>
+    <height>212</height>
+   </size>
+  </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Menu</string>
   </property>
   <widget class="QPushButton" name="butmedicam">
    <property name="geometry">

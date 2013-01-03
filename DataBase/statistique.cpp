@@ -1,5 +1,7 @@
 #include "statistique.h"
 #include "ui_statistique.h"
+#include "menu.h"
+
 
 Statistique::Statistique(QWidget *parent) :
     QDialog(parent),
@@ -11,4 +13,11 @@ Statistique::Statistique(QWidget *parent) :
 Statistique::~Statistique()
 {
     delete ui;
+}
+
+void Statistique::on_commandLinkButton_clicked()
+{
+    Menu m;
+    this->close();
+    m.exec();
 }
