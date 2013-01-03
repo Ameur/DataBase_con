@@ -23,7 +23,7 @@ private slots:
 
     void on_lineEdit_textChanged(const QString &arg1);
 
-    void on_commandLinkButton_2_clicked();
+
 
     void on_pushButton_13_clicked();
 
@@ -60,6 +60,8 @@ private slots:
     void on_tableVente_doubleClicked();
 
     void on_tablesomme_doubleClicked();
+
+
 
 private:
     Ui::vente *ui;

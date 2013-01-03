@@ -22,8 +22,14 @@
      <height>451</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="currentIndex">
-    <number>3</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="Ajouter">
     <attribute name="title">
@@ -675,9 +681,32 @@
   </widget>
  </widget>
  <tabstops>
+  <tabstop>lineEditCodee</tabstop>
+  <tabstop>lineEditLibelle</tabstop>
+  <tabstop>comboCode_fam</tabstop>
+  <tabstop>CategListe</tabstop>
+  <tabstop>ArmoiLis</tabstop>
   <tabstop>lineEdPrixVente</tabstop>
-  <tabstop>Med</tabstop>
+  <tabstop>lineEditQuantite</tabstop>
+  <tabstop>BotAjouterAjouMed</tabstop>
+  <tabstop>BOTAnnulerAjout</tabstop>
   <tabstop>commandLinkButton</tabstop>
+  <tabstop>comboBoxLib</tabstop>
+  <tabstop>lineEditCodee_med</tabstop>
+  <tabstop>lineEditCategorie_3</tabstop>
+  <tabstop>lineEditArmoire_3</tabstop>
+  <tabstop>lineEdPrixVente_3</tabstop>
+  <tabstop>lineEditQuantite_3</tabstop>
+  <tabstop>pushButtonSupModMed</tabstop>
+  <tabstop>pushButtonModifModMed</tabstop>
+  <tabstop>commandLinkButton_3</tabstop>
+  <tabstop>lineEditRechecrchMed</tabstop>
+  <tabstop>reches</tabstop>
+  <tabstop>pushButtonRecherchmed</tabstop>
+  <tabstop>commandLinkButton_2</tabstop>
+  <tabstop>tabtab</tabstop>
+  <tabstop>commandLinkButton_4</tabstop>
+  <tabstop>Med</tabstop>
  </tabstops>
  <resources/>
  <connections/>

@@ -16,21 +16,24 @@ SOURCES += main.cpp\
     midicament.cpp \
     fournisseur.cpp \
     vente.cpp \
-    deconnection.cpp
+    deconnection.cpp \
+    statistique.cpp
 
 HEADERS  += dialog.h \
     menu.h \
     midicament.h \
     fournisseur.h \
     vente.h \
-    deconnection.h
+    deconnection.h \
+    statistique.h
 
 FORMS    += dialog.ui \
     menu.ui \
     midicament.ui \
     fournisseur.ui \
     vente.ui \
-    deconnection.ui
+    deconnection.ui \
+    statistique.ui
 
 RESOURCES += \
     ressources.qrc

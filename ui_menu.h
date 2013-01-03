@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'menu.ui'
 **
-** Created: Wed 26. Dec 21:03:05 2012
+** Created: Thu 3. Jan 02:01:17 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -29,6 +29,7 @@ public:
     QPushButton *butvente;
     QPushButton *butDeconnexion;
     QLabel *lbMenu;
+    QPushButton *pushButton;
 
     void setupUi(QDialog *Menu)
     {
@@ -40,10 +41,10 @@ public:
         butmedicam->setGeometry(QRect(10, 140, 75, 61));
         butfourni = new QPushButton(Menu);
         butfourni->setObjectName(QString::fromUtf8("butfourni"));
-        butfourni->setGeometry(QRect(140, 140, 75, 61));
+        butfourni->setGeometry(QRect(110, 140, 75, 61));
         butvente = new QPushButton(Menu);
         butvente->setObjectName(QString::fromUtf8("butvente"));
-        butvente->setGeometry(QRect(280, 140, 75, 61));
+        butvente->setGeometry(QRect(210, 140, 75, 61));
         butDeconnexion = new QPushButton(Menu);
         butDeconnexion->setObjectName(QString::fromUtf8("butDeconnexion"));
         butDeconnexion->setGeometry(QRect(400, 140, 75, 61));
@@ -53,6 +54,9 @@ public:
         lbMenu->setFrameShape(QFrame::Box);
         lbMenu->setFrameShadow(QFrame::Raised);
         lbMenu->setPixmap(QPixmap(QString::fromUtf8(":/new/prefix1/ressources/ACCUEIL PHARMACIE(3).jpg")));
+        pushButton = new QPushButton(Menu);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        pushButton->setGeometry(QRect(310, 140, 75, 61));
 
         retranslateUi(Menu);
 
@@ -67,6 +71,7 @@ public:
         butvente->setText(QApplication::translate("Menu", "Ventes", 0, QApplication::UnicodeUTF8));
         butDeconnexion->setText(QApplication::translate("Menu", "Deconnecter", 0, QApplication::UnicodeUTF8));
         lbMenu->setText(QString());
+        pushButton->setText(QApplication::translate("Menu", "Statistique", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

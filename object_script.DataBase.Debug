@@ -6,11 +6,13 @@ INPUT(
 ./debug\fournisseur.o
 ./debug\vente.o
 ./debug\deconnection.o
+./debug\statistique.o
 ./debug\moc_dialog.o
 ./debug\moc_menu.o
 ./debug\moc_midicament.o
 ./debug\moc_fournisseur.o
 ./debug\moc_vente.o
 ./debug\moc_deconnection.o
+./debug\moc_statistique.o
 ./debug\qrc_ressources.o
 );

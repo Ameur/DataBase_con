@@ -17,9 +17,10 @@ midicament::midicament(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::midicament)
 {
-
     ui->setupUi(this);
 
+
+    // controle de saissi
         QRegExp regExp1("[A-Za-z][A-Za-z ]*[A-Za-z0-9]*");
         ui->lineEditLibelle->setValidator(new QRegExpValidator(regExp1, this));
 
@@ -45,16 +46,15 @@ midicament::midicament(QWidget *parent) :
     }
     qDebug( "Connected!" );
 
+
+
+
+
+
     listedARMOI();
-
-        listeLibellert();
-
-
-
-
-listemed();
-
-listedFamille();
+    listeLibellert();
+    listemed();
+    listedFamille();
 
 
 
@@ -73,12 +73,9 @@ void midicament::listedARMOI(){
 
         ui->ArmoiLis->clear();
         ui->ArmoiLis->addItem(" selectionner Armoire ");
-
-        while (qry1.next()) {
+       while (qry1.next()) {
             QString item = qry1.value(0).toString();
-
             ui->ArmoiLis->addItem(item);
-
             qDebug() << item;
             j++;
 
@@ -113,18 +110,18 @@ void midicament::listedFamille(){
 
 }
 
+
+
 void midicament::on_commandLinkButton_clicked()
 {
     Menu m;
     this->close();
     m.exec();
 }
+
+
+
 void midicament::on_comboBoxLib_currentIndexChanged(){
-
-
-
-
-
     if (ui->comboBoxLib->currentText()!="")
         {
         QSqlQuery req;
@@ -139,13 +136,8 @@ void midicament::on_comboBoxLib_currentIndexChanged(){
         }
         while (req.next())
            {
-
-
-
-
-         // ***** ajouter ds catégorie *****
+          // ***** ajouter ds catégorie *****
            ui->lineEditCodee_med->setText(req.value(1).toString());
-
            ui->lineEditcodefamille_3->setText(req.value(0).toString());
            if(req.value(5).toString()=="Bébé < 4ans")
            {
@@ -155,7 +147,6 @@ void midicament::on_comboBoxLib_currentIndexChanged(){
                ui->lineEditCategorie_3->addItem("Enfant < 16 ans");
                ui->lineEditCategorie_3->addItem("Adulte < 35 ans");
                ui->lineEditCategorie_3->addItem("Adulte > 35 ans");
-
            }
            else
            if(req.value(5).toString()=="enfant > 12ans")
@@ -166,7 +157,6 @@ void midicament::on_comboBoxLib_currentIndexChanged(){
                ui->lineEditCategorie_3->addItem("Enfant < 16 ans");
                ui->lineEditCategorie_3->addItem("Adulte < 35 ans");
                ui->lineEditCategorie_3->addItem("Adulte > 35 ans");
-
            }
            else
                if(req.value(5).toString()=="Enfant < 16 ans")
@@ -199,20 +189,12 @@ void midicament::on_comboBoxLib_currentIndexChanged(){
                            ui->lineEditCategorie_3->addItem("Enfant > 12 ans");
                            ui->lineEditCategorie_3->addItem("Enfant < 16 ans");
                            ui->lineEditCategorie_3->addItem("Adulte < 35 ans");
-
                        }
 
 
-
-
-
-listedARMOI2();
-
-
-
+     listedARMOI2();
            ui->lineEdPrixVente_3->setText(req.value(6).toString());
            ui->lineEditQuantite_3->setText(req.value(4).toString());
-
            }
            }
            else
@@ -224,11 +206,8 @@ listedARMOI2();
         ui->lineEditArmoire_3->clear();
         ui->lineEdPrixVente_3->clear();
         ui->lineEditQuantite_3->clear();
-
-
-            }
-
-}
+        }
+        }
 
 
 
@@ -340,8 +319,6 @@ void midicament::on_pushButtonRecherchmed_clicked()
             while (qry.next())
             {
                 ui->reches->insertItem(-1,qry.value(3).toString());
-
-
 
             }
             QMessageBox::information(this,tr("Succée"),tr("Rech terminé") );

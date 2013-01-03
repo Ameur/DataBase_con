@@ -4,6 +4,7 @@
 #include "fournisseur.h"
 #include "vente.h"
 #include "deconnection.h"
+#include "statistique.h"
 
 
 Menu::Menu(QWidget *parent) :
@@ -41,7 +42,12 @@ void Menu::on_butvente_clicked()
     this->close();
 }
 
-
+void Menu::on_pushButton_clicked()
+{
+    QDialog *stat= new Statistique();
+    stat->show();
+    this->close();
+}
 
 void Menu::on_butDeconnexion_clicked()
 {
@@ -67,3 +73,5 @@ void Menu::on_butDeconnexion_clicked()
 
         }
 }
+
+

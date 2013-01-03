@@ -21,13 +21,20 @@ vente::vente(QWidget *parent) :
     ui(new Ui::vente)
 {
     ui->setupUi(this);
-    //ui->lcdNumber_2->setSegmentStyle(Filled);
 
     QTimer *timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(showTime()));
     timer->start(1000);
 
     showTime();
+
+    //controle de saisi
+    QRegExp regExp2("[0-9]{1,5}");
+    ui->lineEdit->setValidator(new QRegExpValidator(regExp2, this));
+    QRegExp regExp1("[A-Za-z][A-Za-z ]*[A-Za-z0-9]*");
+    ui->lineEdit_3->setValidator(new QRegExpValidator(regExp1, this));
+
+
 
 
 
@@ -53,7 +60,7 @@ vente::vente(QWidget *parent) :
 
 }
 
-
+// Montre
 void vente::showTime()
 //! [1] //! [2]
 {
@@ -157,55 +164,13 @@ void vente::on_lineEdit_textChanged(const QString &arg1)
 
 }
 
-void vente::on_commandLinkButton_2_clicked()
-{
-/*
 
-    int r =ui->tableVente->currentRow();
-        int nb =ui->tablesomme->rowCount();
-
-        ui->tablesomme->setRowCount(nb+1);
-
-
-       QTableWidgetItem *LIBELLE = ui->tableVente->item(r,0);
-       QString LIBELLE1= LIBELLE->text();
-       QTableWidgetItem *idmed = ui->tableVente->item(r,1);
-       QString id_med= idmed->text();
-
-       QTableWidgetItem *PRIX_VENTE = ui->tableVente->item(r,4);
-       double PRIX_VENTE1= PRIX_VENTE->text().toDouble();
-
-
-       int quante=ui->spinBox_2->value();
-       PRIX_VENTE1=PRIX_VENTE1*quante;
-
-       QString Quant=QString::number(quante);
-       QString pri=QString::number(PRIX_VENTE1,'f',3);
-
-       ui->tablesomme->setItem(nb,0,new QTableWidgetItem(id_med));
-       ui->tablesomme->setItem(nb,1,new QTableWidgetItem(Quant));
-       ui->tablesomme->setItem(nb,2,new QTableWidgetItem(LIBELLE1));
-       ui->tablesomme->setItem(nb,3,new QTableWidgetItem(pri));
-
-       ui->lcdNumber->display(PRIX_VENTE1+ui->lcdNumber->value());
-
-*/
-
-}
 
 void vente::on_pushButton_13_clicked()
 {
-        int r= ui->tablesomme->currentRow();
-
-
-
-       QTableWidgetItem *prix = ui->tablesomme->item(r,3);
-       double zs= prix->text().toDouble();
-       double total=ui->lcdNumber->value();
-       total=total-zs;
-       ui->lcdNumber->display(total);
-       ui->tablesomme->removeRow(r);
-
+    QString recu =ui->line->text();
+    recu=recu.remove(recu.size()-1,1);
+    ui->line->setText(recu);
 
 }
 
@@ -214,7 +179,7 @@ void vente::on_pushButton_13_clicked()
 
 
 
-
+// calculatrice
 
 void vente::on_one_clicked()
 {
@@ -275,6 +240,12 @@ void vente::on_nine_clicked()
 
 }
 
+
+
+
+
+
+
 void vente::on_pushButton_11_clicked()
 {
     ui->line->setText(ui->line->text()+",");
@@ -283,52 +254,16 @@ void vente::on_pushButton_11_clicked()
 
 void vente::on_pushButton_10_clicked()
 {
-    int max =ui->tablesomme->rowCount();
-
-    /*
-
-int r= ui->agentlist->currentRow();
-    QSqlQuery qry;
-    QTableWidgetItem *user = ui->agentlist->item(r,0);
-    QString user1= user->text();
-    QTableWidgetItem *pass = ui->agentlist->item(r,1);
-    QString pass1= pass->text();
-    r=r+1;
-    switch( QMessageBox::warning(this,"Confirmation","Voulez-vous vraiment ajouter ce personnel ? ","Oui","Non",0,1))
-    {
-    case 0:
-        qry.prepare("INSERT INTO agent (user,pass) VALUES (:user,:pass)");
-
-        qry.bindValue(":user",user1);
-        qry.bindValue(":pass",pass1);
-
-    if (qry.exec())
-    { ///Requete reussi
-    qDebug("req reussi! ");
-    QMessageBox::information(this, tr("Done"),tr("Le utilisateur ajouter avec succes! "));
-setupview();
-    }
-    else
-    {
-        qDebug("req NO reussi! ");
-        QMessageBox::information(this, tr("Done"),tr("errue ajouter utilisateur! "));
-
-    }
-
-    case 1:
-    default:
-    ;
-    }
-
         QDate QDTime = QDate::currentDate();
         QString QDTStr = QDTime.toString();
         QSqlQuery qry;
-    int i;
+    int i=0;
     int max =ui->tablesomme->rowCount();
 
-    for( i=1;i<=max;i++)
-    {
-        QTableWidgetItem *id = ui->tablesomme->item(i,0);
+
+
+    while(i<max)
+{        QTableWidgetItem *id = ui->tablesomme->item(i,0);
         QString idd= id->text();
         QTableWidgetItem *qtt = ui->tablesomme->item(i,1);
         QString quant= qtt->text();
@@ -336,20 +271,55 @@ setupview();
         QString prixt= prix->text();
         qry.prepare("INSERT INTO VENTE (ID_MED,QTE,DATE,prixt) VALUES ('"+idd+"','"+quant+"','"+QDTStr+"','"+prixt+"');");
 
-        if(qry.exec())
+        if(!qry.exec())
 
         {
 
 
-            QMessageBox::information(this, "Succée", "ajout ok");
-         }
+            QMessageBox::critical(0, tr("Connexion Echoué"),tr("requete invalide"), QMessageBox::Ok);
+         }i++;}
 
+    double recu = ui->line->text().toDouble();
+    if (recu<ui->lcdNumber->value())
+    {
+        QString msg = "Montant insufisant";
+        QMessageBox::information(this, "Errrrr", msg);
+    }
     else
-      {
-      QMessageBox::critical(0, tr("Connexion Echoué"),tr("requete invalide"), QMessageBox::Ok);
+    {
 
-       }
-    }*/
+
+
+
+
+
+    recu = recu-ui->lcdNumber->value();
+    QString total = QString::number(recu,'f',3);
+
+    QString msg = "Montant a rendre est :"+total;
+  QMessageBox::information(this, "Succée", msg);
+  ui->line->clear();
+  ui->lcdNumber->display(0);
+
+// supprimer les ligne de la table somme apres le calcul
+    int c =ui->tablesomme->rowCount();
+int i;
+  for (i=1;i<=c;i++)
+  {
+      ui->tablesomme->removeRow(0);
+
+}
+  int e =ui->tableVente->rowCount();
+int j;
+for (j=1;j<=e;j++)
+{
+    ui->tableVente->removeRow(0);
+
+}
+
+}
+
+
 
 }
 
@@ -384,11 +354,25 @@ void vente::on_tableVente_doubleClicked()
 
        ui->lcdNumber->display(PRIX_VENTE1+ui->lcdNumber->value());
 
+       ui->spinBox_2->setValue(1);
+
 }
 // supprimmer ligne de la table somme
 void vente::on_tablesomme_doubleClicked()
 {
-    int r= ui->tablesomme->currentRow();
+        int r= ui->tablesomme->currentRow();
+        if(ui->tablesomme->rowCount()==1)
+        {
+            ui->tablesomme->removeRow(r);
+            ui->lcdNumber->display(0);
+        }else
+        {
+         QTableWidgetItem *prix = ui->tablesomme->item(r,3);
+         double prix1= prix->text().toDouble();
+         ui->lcdNumber->display( ui->lcdNumber->value()-prix1);
          ui->tablesomme->removeRow(r);
+        }
+
+
 
 }

@@ -6,11 +6,13 @@ INPUT(
 ./release\fournisseur.o
 ./release\vente.o
 ./release\deconnection.o
+./release\statistique.o
 ./release\moc_dialog.o
 ./release\moc_menu.o
 ./release\moc_midicament.o
 ./release\moc_fournisseur.o
 ./release\moc_vente.o
 ./release\moc_deconnection.o
+./release\moc_statistique.o
 ./release\qrc_ressources.o
 );

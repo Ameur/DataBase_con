@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'vente.ui'
 **
-** Created: Sat 29. Dec 01:39:10 2012
+** Created: Sun 30. Dec 02:35:25 2012
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -42,7 +42,6 @@ public:
     QSpinBox *spinBox_2;
     QWidget *widget_2;
     QTableWidget *tablesomme;
-    QLineEdit *line;
     QLabel *label_5;
     QLCDNumber *lcdNumber;
     QLabel *label_6;
@@ -63,6 +62,7 @@ public:
     QPushButton *pushButton_13;
     QCommandLinkButton *commandLinkButton;
     QFrame *line_5;
+    QLineEdit *line;
     QTableWidget *tableVente;
     QLabel *label_7;
     QFrame *line_3;
@@ -151,9 +151,6 @@ public:
         tablesomme->setFont(font3);
         tablesomme->viewport()->setProperty("cursor", QVariant(QCursor(Qt::ClosedHandCursor)));
         tablesomme->setEditTriggers(QAbstractItemView::NoEditTriggers);
-        line = new QLineEdit(widget_2);
-        line->setObjectName(QString::fromUtf8("line"));
-        line->setGeometry(QRect(130, 50, 161, 31));
         label_5 = new QLabel(widget_2);
         label_5->setObjectName(QString::fromUtf8("label_5"));
         label_5->setGeometry(QRect(0, 20, 91, 20));
@@ -254,6 +251,11 @@ public:
         line_5->setGeometry(QRect(-10, 10, 20, 551));
         line_5->setFrameShape(QFrame::VLine);
         line_5->setFrameShadow(QFrame::Sunken);
+        line = new QLineEdit(widget_2);
+        line->setObjectName(QString::fromUtf8("line"));
+        line->setGeometry(QRect(170, 50, 121, 31));
+        line->setFont(font1);
+        line->setReadOnly(true);
         tableVente = new QTableWidget(vente);
         if (tableVente->columnCount() < 5)
             tableVente->setColumnCount(5);

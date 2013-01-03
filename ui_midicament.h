@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'midicament.ui'
 **
-** Created: Sat 29. Dec 00:16:58 2012
+** Created: Thu 3. Jan 01:54:33 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -111,6 +111,10 @@ public:
         Med = new QTabWidget(midicament);
         Med->setObjectName(QString::fromUtf8("Med"));
         Med->setGeometry(QRect(0, 0, 651, 451));
+        QFont font;
+        font.setBold(true);
+        font.setWeight(75);
+        Med->setFont(font);
         Ajouter = new QWidget();
         Ajouter->setObjectName(QString::fromUtf8("Ajouter"));
         commandLinkButton = new QCommandLinkButton(Ajouter);
@@ -418,11 +422,11 @@ public:
         QTableWidgetItem *__qtablewidgetitem = new QTableWidgetItem();
         __qtablewidgetitem->setBackground(QColor(170, 255, 255));
         tabtab->setHorizontalHeaderItem(0, __qtablewidgetitem);
-        QFont font;
-        font.setKerning(false);
+        QFont font1;
+        font1.setKerning(false);
         QTableWidgetItem *__qtablewidgetitem1 = new QTableWidgetItem();
         __qtablewidgetitem1->setText(QString::fromUtf8("Code Medicament"));
-        __qtablewidgetitem1->setFont(font);
+        __qtablewidgetitem1->setFont(font1);
         __qtablewidgetitem1->setBackground(QColor(170, 255, 255));
         tabtab->setHorizontalHeaderItem(1, __qtablewidgetitem1);
         QTableWidgetItem *__qtablewidgetitem2 = new QTableWidgetItem();
@@ -460,12 +464,35 @@ public:
         commandLinkButton_4->setObjectName(QString::fromUtf8("commandLinkButton_4"));
         commandLinkButton_4->setGeometry(QRect(550, 380, 91, 41));
         Med->addTab(tab, QString());
-        QWidget::setTabOrder(lineEdPrixVente, Med);
-        QWidget::setTabOrder(Med, commandLinkButton);
+        QWidget::setTabOrder(lineEditCodee, lineEditLibelle);
+        QWidget::setTabOrder(lineEditLibelle, comboCode_fam);
+        QWidget::setTabOrder(comboCode_fam, CategListe);
+        QWidget::setTabOrder(CategListe, ArmoiLis);
+        QWidget::setTabOrder(ArmoiLis, lineEdPrixVente);
+        QWidget::setTabOrder(lineEdPrixVente, lineEditQuantite);
+        QWidget::setTabOrder(lineEditQuantite, BotAjouterAjouMed);
+        QWidget::setTabOrder(BotAjouterAjouMed, BOTAnnulerAjout);
+        QWidget::setTabOrder(BOTAnnulerAjout, commandLinkButton);
+        QWidget::setTabOrder(commandLinkButton, comboBoxLib);
+        QWidget::setTabOrder(comboBoxLib, lineEditCodee_med);
+        QWidget::setTabOrder(lineEditCodee_med, lineEditCategorie_3);
+        QWidget::setTabOrder(lineEditCategorie_3, lineEditArmoire_3);
+        QWidget::setTabOrder(lineEditArmoire_3, lineEdPrixVente_3);
+        QWidget::setTabOrder(lineEdPrixVente_3, lineEditQuantite_3);
+        QWidget::setTabOrder(lineEditQuantite_3, pushButtonSupModMed);
+        QWidget::setTabOrder(pushButtonSupModMed, pushButtonModifModMed);
+        QWidget::setTabOrder(pushButtonModifModMed, commandLinkButton_3);
+        QWidget::setTabOrder(commandLinkButton_3, lineEditRechecrchMed);
+        QWidget::setTabOrder(lineEditRechecrchMed, reches);
+        QWidget::setTabOrder(reches, pushButtonRecherchmed);
+        QWidget::setTabOrder(pushButtonRecherchmed, commandLinkButton_2);
+        QWidget::setTabOrder(commandLinkButton_2, tabtab);
+        QWidget::setTabOrder(tabtab, commandLinkButton_4);
+        QWidget::setTabOrder(commandLinkButton_4, Med);
 
         retranslateUi(midicament);
 
-        Med->setCurrentIndex(3);
+        Med->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(midicament);
